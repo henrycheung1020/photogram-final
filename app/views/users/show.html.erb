@@ -1,1 +1,18 @@
-hi
+<h1><%= @the_user.username %></h1>
+<div></div>
+<dt>Private</dt>
+<dd><%= @the_user.private%></dd>
+<dt>Followers</dt>
+<dd><%= @the_user.followers.count%></dd>
+
+<h4>Pending follow requests</h4>
+
+
+<dt>Following</dt>
+<dd><%= @the_user.following.count%></dd>
+
+<ul>
+  <li><a href="/users/<%= @the_user.username%>">Profile</a></li>
+</ul>
+
+<h2>Own photos (<%= @the_user.own_photos.count%>)</h2>

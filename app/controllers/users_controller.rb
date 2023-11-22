@@ -11,7 +11,19 @@ class UsersController < ApplicationController
     render({ :template => "users/index" })
   end
 
-  def show 
-    render({ :template => "users/show" })
+  def show
+    url_username = params.fetch("path_username")
+    matching_usernames = User.where({ :username => url_username})
+    @the_user = matching_usernames.at(0)
+
+    render({ :template => "users/show"})
+  end
+
+  def liked_photos
+    url_username = params.fetch("path_username")
+    matching_usernames = User.where({ :username => url_username})
+    @the_user = matching_usernames.at(0)
+
+    render({ :template => "users/liked_photos"})
   end
 end
