@@ -80,6 +80,8 @@ Rails.application.routes.draw do
   get("/", { :controller => "users", :action => "home"})
 
   get("/users", { :controller => "users", :action => "index"})
+
+  get("/users/:path_id", { :controller => "users", :action => "show" })
   # Defines the root path route ("/")
   # root "articles#index"
 end
