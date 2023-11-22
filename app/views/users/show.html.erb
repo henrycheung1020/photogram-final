@@ -29,11 +29,11 @@
   <% @the_user.own_photos.each do |a_user| %>
   <tr>
     <td><img src= "<%= a_user.image %>"></td>
-    <td><%= a_user.to_s %></td>
+    <td><%=a_user.owner.username %></td>
     <td><%= a_user.caption %></td>
     <td><%= a_user.created_at%></td>
     <td><%= a_user.likes.count%></td>
-    <td><a href="/photos/<%= a_user.owner_id %>">Show details</a></td>
+    <td>Show details</td>
   <% end %>
   </tr>
   
