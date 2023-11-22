@@ -16,3 +16,26 @@
 </ul>
 
 <h2>Own photos (<%= @the_user.own_photos.count%>)</h2>
+<table border="1">
+  <tr>
+    <th>Image</th>
+    <th>Onwer</th>
+    <th>Caption</th>
+    <th>Posted</th>
+    <th>Likes</th>
+    <th></th>
+  </tr>
+  
+  <% @the_user.own_photos.each do |a_user| %>
+  <tr>
+    <td><img src= "<%= a_user.image %>"></td>
+    <td><%= a_user.to_s %></td>
+    <td><%= a_user.caption %></td>
+    <td><%= a_user.created_at%></td>
+    <td><%= a_user.likes.count%></td>
+    <td><a href="/photos/<%= a_user.owner_id %>">Show details</a></td>
+  <% end %>
+  </tr>
+  
+
+</table>
