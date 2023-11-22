@@ -6,6 +6,7 @@
 #  email                          :string           default(""), not null
 #  encrypted_password             :string           default(""), not null
 #  own_photos_count               :integer
+#  private                        :boolean
 #  received_follow_requests_count :integer
 #  remember_created_at            :datetime
 #  reset_password_sent_at         :datetime
