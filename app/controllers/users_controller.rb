@@ -4,6 +4,10 @@ class UsersController < ApplicationController
     redirect_to("/users")
   end
 
+  def sign_in 
+    render({ :template => "users/sign_in"})
+  end
+  
   def index 
     matching_users = User.all
     
@@ -26,4 +30,5 @@ class UsersController < ApplicationController
 
     render({ :template => "users/liked_photos"})
   end
+
 end

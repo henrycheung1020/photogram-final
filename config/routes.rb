@@ -79,6 +79,8 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get("/", { :controller => "users", :action => "home"})
 
+  get("/users/sign_in", {:controller => "users", :action => "sign_in"})
+
   get("/users", { :controller => "users", :action => "index"})
 
   get("/users/:path_username", { :controller => "users", :action => "show" })
