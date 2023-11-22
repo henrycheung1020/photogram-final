@@ -3,8 +3,10 @@
 # Table name: users
 #
 #  id                             :integer          not null, primary key
+#  comments_count                 :integer
 #  email                          :string           default(""), not null
 #  encrypted_password             :string           default(""), not null
+#  likes_count                    :integer
 #  own_photos_count               :integer
 #  private                        :boolean
 #  received_follow_requests_count :integer
