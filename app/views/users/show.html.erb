@@ -33,8 +33,9 @@
     <td><%= a_user.caption %></td>
     <td><%= a_user.created_at%></td>
     <td><%= a_user.likes.count%></td>
-    <td>Show details</td>
+    <td><a href="/photos/<%= a_user.id%>">Show details</a></td>
   <% end %>
+
   </tr>
   
 
