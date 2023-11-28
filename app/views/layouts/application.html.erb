@@ -11,9 +11,14 @@
       <li><a href="/photos">All public photos</a></li>
       <li><a href="/users/sign_in">Sign in</a></li>
       <li><a href="/users/sign_up">Sign up</a></li>
-      <% if %>
-
+      <% if current_user.present? %>
+        <a href="/users/edit">Edit profile</a>
+        <a href="/users/sign_out">Sign out</a>
+      <% else %>
+        <a href="/users/sign_in">Sign in</a>
+        <a href="/users/sign_up">Sign up</a>
       <% end %>
+      <input type="hidden" name="query_user_id" value="<%= current_user.id %>">
     </ul>
     <%= yield %>
   </body>
