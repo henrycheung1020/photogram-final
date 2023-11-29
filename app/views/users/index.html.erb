@@ -24,7 +24,16 @@
       </td>
 
       <td>
-        <%  %>
+        <% if current_user.present? %>
+          <% if a_user.following == true %>
+            <a href="/delete_follow_request/<%= a_user.id%>">Unfollow</a>
+          <% else %>
+            <form action="/insert_follow_request" method="post">
+              <input type="hidden" name="query_recipient_id">
+              <button>Follow</button>
+            </form>
+          <% end %>
+        <% end %>
       </td>
 
       <td>
