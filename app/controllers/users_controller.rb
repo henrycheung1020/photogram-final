@@ -1,11 +1,8 @@
 class UsersController < ApplicationController
   skip_before_action(:authenticate_user!, { :only => [:index] })
+  
   def home 
     redirect_to("/users")
-  end
-
-  def sign_in 
-    render({ :template => "users/sign_in"})
   end
   
   def index 

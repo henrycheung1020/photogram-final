@@ -76,10 +76,13 @@ Rails.application.routes.draw do
   #------------------------------
 
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  get("/", { :controller => "users", :action => "home"})
 
-  get("/users/sign_in", {:controller => "users", :action => "sign_in"})
+  root "users#index"
+
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get("/", { :controller => "users", :action => "index"})
+
+  # get("/users/sign_in", {:controller => "users", :action => "sign_in"})
 
   get("/users", { :controller => "users", :action => "index"})
 
