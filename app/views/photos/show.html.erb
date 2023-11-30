@@ -16,6 +16,15 @@
 <dd><%= @the_photo.fans %></dd>
 <dt>Add a fan</dt>
 <dd></dd>
+<dt>
+<%# if current_user.present? %>
+<!--  Delete photo
+    <dd><a href="/delete_photo/<%#= @the_photo.id %>">Delete this photo</a></dd>
+  <%# else %>-->
+<!--  -->
+  <%# end %>
+<%# end %>
+</dt>
 
 <h2>Comments</h2>
 <table>
