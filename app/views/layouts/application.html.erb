@@ -17,6 +17,17 @@
         <li><a href="/users/sign_up">Sign up</a></li>
       <% end %>
     </ul>
+    <% if notice.present? %>
+      <div>
+        <%= notice %>
+      </div>
+    <% end %>
+
+    <% if alert.present? %>
+      <div>
+        <%= alert %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
